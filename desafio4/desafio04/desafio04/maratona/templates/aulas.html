@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Aulas</h1>
+  {% if aulas_list %}
+  <ul>
+    {% for aula in aulas_list %}
+      <li>
+        {{ aula.name }}({{aula.url}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}       
+{% endblock %}

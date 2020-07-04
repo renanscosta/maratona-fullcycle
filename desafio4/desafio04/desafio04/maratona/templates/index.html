@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Maratona Full Cycle</h1>
+  {% if aulas %}
+  <ul>
+    {% for aula in aulas %}
+      <li style="padding: 5px;">
+        {{ aula.name }}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no books in the library.</p>
+  {% endif %}       
+  <!-- <ul>
+    <li><strong>Aulas:</strong> {{ num_authors }}</li>
+  </ul> -->
+{% endblock %}
